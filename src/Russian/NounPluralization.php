@@ -258,7 +258,7 @@ class NounPluralization extends \morphos\BasePluralization implements Cases
         } elseif (in_array($last, ['я'], true)) { // молния
             $forms[Cases::RODIT] = $prefix . 'й';
         } elseif (RussianLanguage::isHissingConsonant($last) || ($soft_last && $last != 'й') || in_array(S::slice($word,
-                -2), ['чь', 'сь', 'ть', 'нь', 'дь'], true)) {
+                -2), ['чь', 'сь', 'ть', 'нь', 'дь', 'ши'], true)) {
             $forms[Cases::RODIT] = $prefix . 'ей';
         } elseif ($last == 'й' || S::slice($word, -2) == 'яц') { // месяц
             $forms[Cases::RODIT] = $prefix . 'ев';
